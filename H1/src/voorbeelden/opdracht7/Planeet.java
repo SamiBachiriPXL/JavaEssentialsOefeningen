@@ -1,4 +1,4 @@
-package be.pxl.h1.opdracht7;
+package voorbeelden.opdracht7;
 
 public class Planeet {
     // instantie eigenschappen

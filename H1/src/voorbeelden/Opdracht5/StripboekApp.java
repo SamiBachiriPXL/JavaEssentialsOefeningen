@@ -1,4 +1,4 @@
-package be.pxl.h1.Opdracht5;
+package voorbeelden.Opdracht5;
 
 public class StripboekApp {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package be.pxl.h1.opdracht7;
+package voorbeelden.opdracht7;
 
 public class PlaneetApp {
     public static void main(String[] args) {
@@ -12,7 +12,7 @@ public class PlaneetApp {
 
         neptunus.setNaam("Neptunus");
         neptunus.setDiameter(49528);
-        neptunus.setAfstandzon(4495100000);
+        neptunus.setAfstandzon(449510000);
         // Welke planeet het dichst bij de zon?
 
         if (mars.getAfstandzon()>neptunus.getAfstandzon()){

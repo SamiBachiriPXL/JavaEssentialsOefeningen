@@ -1,4 +1,4 @@
-package be.pxl.h1.hello;
+package voorbeelden.hello;
 
 public class HelloApp {
     public static void main(String[] args){

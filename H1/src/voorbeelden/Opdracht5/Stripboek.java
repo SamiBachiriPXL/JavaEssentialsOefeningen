@@ -1,4 +1,4 @@
-package be.pxl.h1.Opdracht5;
+package voorbeelden.Opdracht5;
 
 public class Stripboek {
     // instantie eigenschappen

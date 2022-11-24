@@ -1,4 +1,4 @@
-package be.pxl.h1.auto;
+package voorbeelden.auto;
 
 public class AutoApp {
     public static void main(String[] args) {
@@ -15,5 +15,6 @@ public class AutoApp {
         // extra bovenstaande realiseren door gebruik te maken van een methoden in de klasse Auto
         auto.drukGegevens();
         System.out.println(auto); // drukt geheugenadres(referentie) af waar dit object zich in het intern geheugen bevindt
+
     }
 }

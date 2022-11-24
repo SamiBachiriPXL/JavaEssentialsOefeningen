@@ -1,4 +1,4 @@
-package be.pxl.h1.auto;
+package voorbeelden.auto;
 
 public class Auto {
     // eigenschappe = instantievariabelen = field (velden) = attributen=kenmerken
@@ -80,20 +80,21 @@ public class Auto {
         System.out.println("Deze auto is van het merk " + merk + " in de kleur " + kleur);
         // extra opdracht 6: druk af al dna niet automaat
         if (automaat){
+            System.out.println("Het is automaat");
+        } else {
             System.out.println("Het is geen automaat");
         }
-        System.out.println("Het is een wagen met " + aantalDeuren + " deuren.");
-        System.out.println("Kilometerstand bedraagt " + kilometerstand + " kilometers.");
+        System.out.printf("Het is een wagen met %d deuren.\n", aantalDeuren);
+        System.out.printf("Kilometerstand bedraagt %d kilometers.\n", kilometerstand);
         // extra opdracht 6 ook de prijs afdrukken
-        System.out.println("De prijs voor de wagen is euro " + getPrijs());
-
-        // method overloading = 2 methoden met dezelfde naam indezelfde klasse met een verschillende parameterlijn
-        public void rijden (int aantalKm){
-            kilometerstand = kilometerstand + aantalKm;
-        }
-
-        public void rijden (int uren, int snelhead){
-
-        }
+        System.out.printf("De prijs voor de wagen is %d", getPrijs());
+//        // method overloading = 2 methoden met dezelfde naam indezelfde klasse met een verschillende parameterlijn
+//        public void rijden (int aantalKm){
+//            kilometerstand = kilometerstand + aantalKm;
+//        }
+//
+//        public void rijden (int uren, int snelhead){
+//
+//        }
     }
 }

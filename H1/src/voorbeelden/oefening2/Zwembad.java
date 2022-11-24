@@ -1,4 +1,4 @@
-package be.pxl.h1.oefening2;
+package voorbeelden.oefening2;
 
 public class Zwembad {
     private double lengte;

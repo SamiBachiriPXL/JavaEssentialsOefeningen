@@ -1,4 +1,4 @@
-package be.pxl.h1.Oefening1;
+package voorbeelden.Oefening1;
 
 public class MijnToren {
     public static void main(String[] args) {
