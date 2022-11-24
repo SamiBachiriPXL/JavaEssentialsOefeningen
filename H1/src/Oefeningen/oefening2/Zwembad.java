@@ -1,4 +1,4 @@
-package voorbeelden.oefening2;
+package Oefeningen.oefening2;
 
 public class Zwembad {
     private double lengte;

@@ -1,4 +1,4 @@
-package voorbeelden.Oefening1;
+package Oefeningen.Oefening1;
 
 public class Toren {
     private String naam;

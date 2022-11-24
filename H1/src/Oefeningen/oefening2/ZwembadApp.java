@@ -1,4 +1,4 @@
-package voorbeelden.oefening2;
+package Oefeningen.oefening2;
 
 public class ZwembadApp {
     public static void main(String[] args) {
