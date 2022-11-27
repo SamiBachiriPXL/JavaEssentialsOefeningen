@@ -1,4 +1,4 @@
-package Oefeningen.oef3;
+package Oefeningen.Oefening3;
 
 public class Voetballer {
     public String naam;
@@ -8,8 +8,7 @@ public class Voetballer {
     public int aantalDoelpunten;
 
 
-    public double getPrijs(int leeftijd, int beoordelingscijfer, String position, int aantalDoelpunten){
-        this.typeSpeler=position;
+    public double getPrijs(){
         double prijs = 0;
         if (typeSpeler != null){
             if (typeSpeler.equals("aanvaller")){
@@ -79,6 +78,10 @@ public class Voetballer {
                     prijs +=(10000*beoordelingscijfer);
                 } else {
                     prijs +=(10000*beoordelingscijfer);
+                    if (aantalDoelpunten > 20) {
+                        prijs-=(9000 * (aantalDoelpunten-20));
+                    }
+
                 }
             }
         }

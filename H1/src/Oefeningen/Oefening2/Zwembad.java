@@ -1,4 +1,4 @@
-package Oefeningen.oefening2;
+package Oefeningen.Oefening2;
 
 public class Zwembad {
     private double lengte;
