@@ -6,32 +6,16 @@ public class Phone {
     private int numberOfCalls;
     private int numberOfFreeCalls;
 
-    public String getNumber() {
-        return number;
-    }
-
     public void setNumber(String number) {
         this.number = number;
-    }
-
-    public String getProvider() {
-        return provider;
     }
 
     public void setProvider(String provider) {
         this.provider = provider;
     }
 
-    public int getNumberOfCalls() {
-        return numberOfCalls;
-    }
-
     public void setNumberOfCalls(int numberOfCalls) {
         this.numberOfCalls = numberOfCalls;
-    }
-
-    public int getNumberOfFreeCalls() {
-        return numberOfFreeCalls;
     }
 
     public void setNumberOfFreeCalls(int numberOfFreeCalls) {
