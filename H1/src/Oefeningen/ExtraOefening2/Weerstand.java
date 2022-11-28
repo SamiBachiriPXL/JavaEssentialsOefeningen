@@ -5,6 +5,10 @@ public class Weerstand {
     private char band2;
     private char band3;
 
+    private String[] kleuren = {"zwart", "bruin", "rood", "oranje", "geel", "groen", "blauw", "violet", "grijs", "wit"};
+    private int[] waardes = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
+    private char[] letters = {'Z', 'b', 'R', 'O', 'g', 'G', 'B', 'V', 'L', 'W'};
+
     public void setBand1(char band1) {
         this.band1 = band1;
     }
@@ -17,30 +21,40 @@ public class Weerstand {
         this.band3 = band3;
     }
 
-    public char getBand1() {
-        return band1;
-    }
+    public int getWeerstandswaarde(){
+        int waarde1 = vindWaarde(band1);
+        int waarde2 = vindWaarde(band2);
+        int waarde3 = vindWaarde(band3);
 
-    public char getBand2() {
-        return band2;
-    }
-
-    public char getBand3() {
-        return band3;
-    }
-
-    public int getWeerstandswaarde(int getal1, int getal2, int getal3){
         int macht = 10;
-        if (getal3==0){
+        if (waarde3==0){
             macht = 0;
         }
-        for (int i=0; i<=getal3; i++){
+        for (int i=0; i<=waarde3; i++){
             macht*=10;
         }
-        return (10 * getal1 + getal2) * macht;
+        return (10 * waarde1 + waarde2) * macht;
     }
 
-//    public String getKleur(){
-//
-//    }
+    public String getKleur(){
+        return vindKleur(band1) + " " + vindKleur(band2) + " " + vindKleur(band3);
+    }
+
+    private String vindKleur(char band) {
+        for (int i=0; i<letters.length; i++){
+            if (band==letters[i]){
+                return kleuren[i];
+            }
+        }
+        return "(kleur niet gevonden)";
+    }
+
+    private int vindWaarde(char band) {
+        for (int i=0; i<letters.length; i++){
+            if (band==letters[i]){
+                return waardes[i];
+            }
+        }
+        return 0;
+    }
 }
