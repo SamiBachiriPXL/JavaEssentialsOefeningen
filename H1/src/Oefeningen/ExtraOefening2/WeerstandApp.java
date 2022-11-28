@@ -2,7 +2,7 @@ package Oefeningen.ExtraOefening2;
 
 import java.util.Scanner;
 
-public class WeestandApp {
+public class WeerstandApp {
     public static void main(String[] args) {
         Weerstand weerstand = new Weerstand();
         Scanner scanner = new Scanner(System.in);
