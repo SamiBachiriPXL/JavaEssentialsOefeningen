@@ -10,7 +10,7 @@ public class LiftApp {
         lift.setMaxAantal(5);
         lift.setVerdieping(0);
         lift.setAantalVerdiepingen(10);
-        int keuze = scanner.nextInt();
+        int keuze = 0;
         int nummer;
 
         while (keuze !=4){

@@ -16,5 +16,8 @@ public class AutoApp {
         auto.drukGegevens();
         System.out.println(auto); // drukt geheugenadres(referentie) af waar dit object zich in het intern geheugen bevindt
 
+//        int[] kilometers = {678, 789, 812, 965, 123};
+//        auto.rijden(kilometers);
+//        System.out.printf("De kilometerafstand is %,d%n", auto.getKilometerstand());
     }
 }

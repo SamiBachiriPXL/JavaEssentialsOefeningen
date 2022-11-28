@@ -96,5 +96,12 @@ public class Auto {
 //        public void rijden (int uren, int snelhead){
 //
 //        }
+
+//        public void rijden(int[] afstanden){
+//            afstanden[0]=100000;
+//            for (int afstand: afstanden){
+//                kilometerstand +=afstand;
+//            }
+//        }
     }
 }
