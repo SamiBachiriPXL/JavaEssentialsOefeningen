@@ -1,0 +1,129 @@
+package Voorbeelden.Auto;
+
+public class Auto {
+    // eigenschappe = instantievariabelen = field (velden) = attributen=kenmerken
+    private String merk;
+    private String kleur;
+    private int kilometerstand;
+    private int aantalDeuren;
+    private boolean automaat;
+    // private, public = access modifier
+    // OO principe zoveel mogelijk verbergen voor de gebruiker van je klasse = datahiding = encapsulation
+    // setter = methode waarmee je de waarde van instantie eigenschap kan wijzigen
+
+    public Auto(String merk, String kleur, int aantalDeuren){
+        this.merk = merk;
+        this.kleur = kleur;
+        this.aantalDeuren = aantalDeuren;
+//        this.setKilometerstand()=kilometerstand;
+
+
+    }
+
+    // copy constructor = maakt een nieuw object aan dat een kopie is van een bestaad object
+    public Auto(Auto auto){
+        merk = auto.merk;
+        kleur = auto.kleur;
+        kilometerstand = auto.kilometerstand;
+        aantalDeuren = auto.aantalDeuren;
+        automaat = auto.automaat;
+    }
+    public void setKleur(String kleur){
+        this.kleur = kleur;
+    }
+
+    // shadowing = de instantie eigenschap kleur staat "in de schaduw" van de parameter kleur.
+
+    public void setMerk(String merk) {
+        this.merk = merk;
+    }
+
+    public void setKilometerstand(int kilometerstand) {
+        if (kilometerstand<0){
+            kilometerstand+=1;
+        }
+        this.kilometerstand = kilometerstand;
+    }
+
+    public void setAantalDeuren(int aantalDeuren) {
+        this.aantalDeuren = aantalDeuren;
+    }
+
+    public void setAutomaat(boolean automaat) {
+        this.automaat = automaat;
+    }
+
+    // getters= methoden om de inhoud van een instantievariabele op te vragen
+    public String getMerk(){
+
+        return merk;
+    }
+
+    public String getKleur() {
+
+        return kleur;
+    }
+
+    public int getAantalDeuren() {
+
+        return aantalDeuren;
+    }
+
+    public int getKilometerstand() {
+
+        return kilometerstand;
+    }
+
+    public boolean isAutomaat() {
+        return automaat;
+    }
+
+
+
+    // opdracht 6
+    public double getPrijs(){
+        double prijs = 2000;
+        if (aantalDeuren == 5){
+            prijs = prijs + 5000;
+        } else if (aantalDeuren == 3){
+            prijs = prijs - 500;
+        }
+        if (automaat){
+            prijs = prijs + 2000;
+        } else {
+            prijs= prijs * 0.98;
+        }
+        return prijs;
+    }
+
+    public void drukGegevens(){
+        System.out.println("Deze auto is van het merk " + merk + " in de kleur " + kleur);
+        // extra opdracht 6: druk af al dna niet automaat
+        if (automaat){
+            System.out.println("Het is automaat");
+        } else {
+            System.out.println("Het is geen automaat");
+        }
+        System.out.printf("Het is een wagen met %d deuren.\n", aantalDeuren);
+        System.out.printf("Kilometerstand bedraagt %d kilometers.\n", kilometerstand);
+        // extra opdracht 6 ook de prijs afdrukken
+        System.out.printf("De prijs voor de wagen is %.2f\n", getPrijs());
+//        // method overloading = 2 methoden met dezelfde naam indezelfde klasse met een verschillende parameterlijn
+//        public void rijden (int aantalKm){
+//            kilometerstand = kilometerstand + aantalKm;
+//        }
+//
+//        public void rijden (int uren, int snelhead){
+//
+//        }
+
+//        public void rijden(int[] afstanden){
+//            afstanden[0]=100000;
+//            for (int afstand: afstanden){
+//                kilometerstand +=afstand;
+//            }
+//        }
+        // opdracht H2
+
+    }
+}
