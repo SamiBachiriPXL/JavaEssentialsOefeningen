@@ -1,10 +1,10 @@
 package Oefeningen.Oefening2;
 
 public class Bankrekening {
-    private String rekeningNummer= "geen";
-    private String naam = "onbekend";
-    private double saldo = 0;
-    private double rentepercentage = 1.2;
+    private String rekeningNummer;
+    private String naam;
+    private double saldo;
+    private double rentepercentage;
 
     public Bankrekening(String rekeningNummer, String naam, double saldo, double rentepercentage) {
         this.rekeningNummer = rekeningNummer;
@@ -20,9 +20,9 @@ public class Bankrekening {
         this.rentepercentage = 1.2;
     }
 
-    public void notNegative(double getal){
-        if (getal < 0){
-            getal=0;
+    public void notNegative(double saldo){
+        if (saldo < 0){
+            saldo=0;
         }
     }
 
@@ -49,16 +49,57 @@ public class Bankrekening {
     }
 
     public void stort(double bedrag){
-        saldo+=bedrag;
+        if (valideerRekening()){
+            saldo+=bedrag;
+            System.out.printf("Na storting van %.2f euro\n", bedrag);
+            check();
+        }
     }
 
     public void neemOp(double bedrag){
-        if (bedrag > saldo){
-            System.out.printf("Het saldo is %.2f en je wil %.2f euro\n", saldo, bedrag);
-            System.out.printf("U mag enkel %.2f euro opnemen", saldo);
+        if (valideerRekening()){
+            if (bedrag > saldo){
+                System.out.printf("Het saldo is %.2f en je wil %.2f euro\n", saldo, bedrag);
+                System.out.printf("U mag enkel %.2f euro opnemen\n", saldo);
+                check();
 
-        } else if (saldo == 0) {
-            System.out.println("U kan geen geld opnemen");
+            } else if (saldo == 0) {
+                System.out.println("U kan geen geld opnemen");
+            }
         }
+    }
+
+    public void doeVerrichting(double bedrag){
+        if (valideerRekening()){
+            if (bedrag < 0){
+                neemOp(bedrag);
+            } else{
+                stort(bedrag);
+            }
+        }
+    }
+
+    public void schrijfRenteBij(){
+        double rente = (saldo * rentepercentage)/100;
+        System.out.printf("Rente wordt bijgeschreven voor %.2f euro\n", rente);
+        this.saldo+=rente;
+        check();
+    }
+
+    public boolean valideerRekening(){
+        if (!rekeningNummer.equals("geen") && !naam.equals("onbekend")){
+            return true;
+        } else {
+            System.out.println("error");
+            return false;
+        }
+    }
+
+    public void print(){
+        System.out.printf("Saldo op spaarrekening %s op naam van %s bedraagt %.2f\n", rekeningNummer, naam, saldo);
+    }
+
+    public void check(){
+        print();
     }
 }
