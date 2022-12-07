@@ -1,10 +1,10 @@
 package Oefeningen.Oefening2;
 
 public class Bankrekening {
-    private String rekeningNummer;
-    private String naam;
-    private double saldo;
-    private double rentepercentage;
+    private String rekeningNummer = "geen";
+    private String naam = "onbekend";
+    private double saldo = 0;
+    private double rentepercentage = 1.2;
 
     public Bankrekening(String rekeningNummer, String naam, double saldo, double rentepercentage) {
         this.rekeningNummer = rekeningNummer;
@@ -14,10 +14,11 @@ public class Bankrekening {
     }
 
     public Bankrekening() {
-        this.rekeningNummer = "geen";
-        this.naam = "onbekend";
-        this.saldo = 0;
-        this.rentepercentage = 1.2;
+
+    }
+
+    public Bankrekening(Bankrekening bankrekening){
+        this(bankrekening.rekeningNummer, bankrekening.naam, bankrekening.saldo, bankrekening.rentepercentage);
     }
 
     public void notNegative(double saldo){
@@ -65,6 +66,9 @@ public class Bankrekening {
 
             } else if (saldo == 0) {
                 System.out.println("U kan geen geld opnemen");
+            } else {
+                saldo -=bedrag;
+                System.out.printf("Saldo is nu %.2f", saldo);
             }
         }
     }
