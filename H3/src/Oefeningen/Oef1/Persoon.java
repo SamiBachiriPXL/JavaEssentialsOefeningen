@@ -1,5 +1,7 @@
 package Oefeningen.Oef1;
 
+import java.time.LocalDate;
+
 public class Persoon {
 
     private String voornaam;
@@ -9,7 +11,7 @@ public class Persoon {
 
     private double gewicht;
 
-    private int geboortejaar;
+    private LocalDate geboortedatum;
 
     public Persoon(String voornaam, String naam) {
         this.naam = naam;
@@ -46,8 +48,9 @@ public class Persoon {
         this.gewicht = gewicht;
     }
 
-    public void setGeboortejaar(int geboortejaar) {
-        this.geboortejaar = geboortejaar;
+    public LocalDate setGeboortedatum(LocalDate geboortedatum) {
+        this.geboortedatum = geboortedatum;
+        return this.geboortedatum;
     }
     public String getNaam() {
         return naam;
@@ -65,20 +68,30 @@ public class Persoon {
         return gewicht;
     }
 
-    public int getGeboortejaar() {
-        return geboortejaar;
+    public LocalDate getGeboortedatum() {
+        return geboortedatum;
     }
 
+//    public String allToString(){
+//        return
+//            "Deze persoon is " + voornaam + " " + naam + "\n" +
+//            "gewicht\t: " + gewicht + "\n" +
+//            "lengte\t: " + lengte + "\n" +
+//            "geboortejaar\t: " + geboortedatum + "\n";
+//    }
+
     public String allToString(){
-        return
-            "Deze persoon is " + voornaam + " " + naam + "\n" +
-            "gewicht\t: " + gewicht + "\n" +
-            "lengte\t: " + lengte + "\n" +
-            "geboortejaar\t: " + geboortejaar + "\n";
+        StringBuilder text = new StringBuilder();
+        text.append("Deze persoon is ").append(voornaam.toUpperCase()).append(" ").append(naam).append("\n");
+        text.append("gewicht: ").append(gewicht).append("\n");
+        text.append("lengte: ").append(lengte).append("\n");
+        text.append("geboortejaar: ").append(geboortedatum).append("\n");
+        return text.toString();
     }
 
     public double berekenBmi(){
-        return gewicht / (lengte*lengte);
+        double BMI = gewicht / (lengte*lengte);
+        return Math.round((BMI * 10)/10);
     }
 
     public String geefOmschrijving(){
@@ -95,14 +108,23 @@ public class Persoon {
         }
     }
 
+//    public void voegVoornamenToe(String[] voornamen){
+//        for (String n: voornamen){
+//            voornaam +=" " + n;
+//        }
+//    }
+
     public void voegVoornamenToe(String[] voornamen){
+        StringBuilder string = new StringBuilder();
+        string.append(voornaam);
         for (String n: voornamen){
-            voornaam +=" " + n;
+            string.append(" " + n);
         }
+        string.toString();
     }
 
     public int getLeeftijd(){
-        return 2022-geboortejaar;
+        return 2022-geboortedatum.getYear();
     }
 
     public void groei1(){
@@ -111,5 +133,18 @@ public class Persoon {
 
     public void groei2(double lengte){
         setLengte(this.lengte+lengte);
+    }
+
+    public String geefNaamAfgekort(){
+        return voornaam.substring(0, 1).toUpperCase() + "." + naam.substring(0, 1).toUpperCase() + naam.substring(1).toLowerCase();
+    }
+
+    public String encrypteerNaam(int getal, String afgekort){
+        StringBuilder encrypted = new StringBuilder();
+        for (int i=0; i<afgekort.length(); i++){
+            encrypted.append((char) (afgekort.charAt(i) + getal));
+        }
+
+        return encrypted.toString();
     }
 }

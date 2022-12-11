@@ -1,7 +1,7 @@
 package Voorbeelden.Auto;
 
 public class Auto {
-    // eigenschappe = instantievariabelen = field (velden) = attributen=kenmerken
+    // eigenschappen = instantievariabelen = field (velden) = attributen=kenmerken
     private String merk;
     private String kleur;
     private int kilometerstand;
