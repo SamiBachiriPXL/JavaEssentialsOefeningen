@@ -48,9 +48,8 @@ public class Persoon {
         this.gewicht = gewicht;
     }
 
-    public LocalDate setGeboortedatum(LocalDate geboortedatum) {
+    public void setGeboortedatum(LocalDate geboortedatum) {
         this.geboortedatum = geboortedatum;
-        return this.geboortedatum;
     }
     public String getNaam() {
         return naam;
@@ -90,8 +89,8 @@ public class Persoon {
     }
 
     public double berekenBmi(){
-        double BMI = gewicht / (lengte*lengte);
-        return Math.round((BMI * 10)/10);
+        double bmi = gewicht / (lengte*lengte);
+        return Math.round((bmi * 10))/10.0;
     }
 
     public String geefOmschrijving(){
@@ -118,7 +117,7 @@ public class Persoon {
         StringBuilder string = new StringBuilder();
         string.append(voornaam);
         for (String n: voornamen){
-            string.append(" " + n);
+            string.append(" ").append(n);
         }
         string.toString();
     }
@@ -140,6 +139,7 @@ public class Persoon {
     }
 
     public String encrypteerNaam(int getal, String afgekort){
+
         StringBuilder encrypted = new StringBuilder();
         for (int i=0; i<afgekort.length(); i++){
             encrypted.append((char) (afgekort.charAt(i) + getal));

@@ -14,13 +14,13 @@ public class Phone {
         this.provider = provider;
     }
 
-    public void setNumberOfCalls(int numberOfCalls) {
-        this.numberOfCalls = numberOfCalls;
-    }
+//    public void setNumberOfCalls(int numberOfCalls) {
+//        this.numberOfCalls = numberOfCalls;
+//    }
 
-    public void setNumberOfFreeCalls(int numberOfFreeCalls) {
-        this.numberOfFreeCalls = numberOfFreeCalls;
-    }
+//    public void setNumberOfFreeCalls(int numberOfFreeCalls) {
+//        this.numberOfFreeCalls = numberOfFreeCalls;
+//    }
 
     public void call(String telefoonnummer){
         if (telefoonnummer.equals("112") || telefoonnummer.equals("102") || telefoonnummer.equals("070245245")){

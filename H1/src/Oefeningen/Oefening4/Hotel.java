@@ -29,7 +29,7 @@ public class Hotel {
                return prijs;
            }
            prijs=56;
-       } else if (aantalSterren<3) {
+       } else {
            prijs=48;
        }
         return prijs;

@@ -23,6 +23,9 @@ public class Persoon {
 
     public Persoon(Persoon persoon){
         this(persoon.voornaam, persoon.naam);
+        lengte = persoon.lengte;
+        gewicht = persoon.gewicht;
+        geboortejaar = persoon.geboortejaar;
     }
 
     public void setNaam(String naam) {
