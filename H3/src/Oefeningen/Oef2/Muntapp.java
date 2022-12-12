@@ -14,13 +14,14 @@ public class Muntapp {
         lijst.add(munt2);
         lijst.add(munt3);
         lijst.add(munt4);
+        String rounding = "%." + Munt.getAfronding() + "f %s\n";
         for (int i=0; i<lijst.size(); i++){
-            System.out.printf("%.3f %s\n", lijst.get(i).getKoers(), lijst.get(i).getNaam());
+            System.out.printf(rounding, Math.round(lijst.get(i).getKoers() * 1000)/1000.0, lijst.get(i).getNaam());
         }
 
         System.out.printf("Overzicht koersen tov %s: 1 %s =\n", lijst.get(0).getNaam(), lijst.get(0).getNaam());
         for (int i=1; i< lijst.size(); i++){
-            System.out.println((1/lijst.get(0).getKoers())*lijst.get(i).getKoers());
+            System.out.printf(rounding, 1/lijst.get(0).getKoers()*lijst.get(i).getKoers(), lijst.get(i).getNaam());
         }
     }
 }

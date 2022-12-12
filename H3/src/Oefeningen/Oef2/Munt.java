@@ -30,7 +30,7 @@ public class Munt {
         this.koers = koers;
     }
 
-    public static int getAFRONDING() {
+    public static int getAfronding() {
         return AFRONDING;
     }
 
