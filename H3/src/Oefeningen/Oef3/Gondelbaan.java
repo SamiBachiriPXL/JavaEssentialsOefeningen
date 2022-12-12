@@ -119,6 +119,6 @@ public class Gondelbaan {
     }
 
     public String toString(){
-        return naam + " [" + getHoogteVerschil() + "m]";
+        return getNaam() + " [" + getHoogteVerschil() + "m]";
     }
 }
