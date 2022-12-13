@@ -4,7 +4,7 @@ public class Trainer {
     private Pokedex pokedex;
     private String naam;
 
-    public Trainer(String naam, Pokedex pokedex) {
+    public Trainer(String naam) {
         this.naam = naam;
         this.pokedex = new Pokedex();
     }

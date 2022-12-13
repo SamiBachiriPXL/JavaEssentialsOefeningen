@@ -18,6 +18,8 @@ public class Pokemon {
         return type;
     }
 
+
+
     public String toString(){
         return naam + " (" + type + ")";
     }

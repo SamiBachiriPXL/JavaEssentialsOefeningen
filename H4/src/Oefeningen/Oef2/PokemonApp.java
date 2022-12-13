@@ -2,7 +2,7 @@ package Oefeningen.Oef2;
 
 public class PokemonApp {
     public static void main(String[] args) {
-        Trainer Sam = new Trainer("Sam", new Pokedex());
+        Trainer Sam = new Trainer("Sam");
 //        Pokedex pokedex1 = new Pokedex();
         Sam.vangPokemon(new Pokemon("Chamander", "Fire"));
         Sam.vangPokemon(new Pokemon("Squirtle", "Water"));
