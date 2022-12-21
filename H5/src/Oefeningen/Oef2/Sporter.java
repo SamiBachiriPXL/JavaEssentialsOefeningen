@@ -6,14 +6,14 @@ public class Sporter extends Persoon{
     private String omschrijving;
     private static int aantal;
 
-    public Sporter(String naam, String voornaam) {
-        super(naam, voornaam);
+    public Sporter(String voornaam, String naam) {
+        super(voornaam, naam);
         omschrijving="onbepaald";
         aantal++;
     }
 
-    public Sporter(String naam, String voornaam, String omschrijving) {
-        super(naam, voornaam);
+    public Sporter(String voornaam, String naam, String omschrijving) {
+        super(voornaam, naam);
         this.omschrijving = omschrijving;
     }
 
@@ -26,7 +26,7 @@ public class Sporter extends Persoon{
     }
 
     public void print(){
-        System.out.println(getVoornaam() + getNaam());
+        System.out.println(getVoornaam() + " " + getNaam());
         System.out.println(omschrijving);
     }
 }

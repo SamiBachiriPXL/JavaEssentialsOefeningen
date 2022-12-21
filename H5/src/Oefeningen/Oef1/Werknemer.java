@@ -53,6 +53,6 @@ public class Werknemer extends Persoon{
     @Override
     public void print() {
         super.print();
-        System.out.printf("Zijn functie is %s en verdient %.2f%n", functie, salaris);
+        System.out.printf("Zijn functie is %s en verdient %.2f%n", functie, getSalaris());
     }
 }
