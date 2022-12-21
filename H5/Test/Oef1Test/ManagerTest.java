@@ -70,6 +70,5 @@ public class ManagerTest {
 		int telWerknemer = telAfterWerknemer - telBeforeWerknemer;
 		double percentage = (double) telManager / telWerknemer;
 		assertTrue(0.4 == percentage || 40 == percentage * 100);
-
 	}
 }
