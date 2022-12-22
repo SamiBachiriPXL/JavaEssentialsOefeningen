@@ -25,7 +25,6 @@ public class Gondelbaan {
 
     public String getNaam() {
         StringBuilder aangepasteNaam = new StringBuilder();
-        naam = naam.substring(0, 1).toUpperCase() + naam.substring(1);
         String[] woorden = naam.split(" ");
         for (String woord :
                 woorden) {
@@ -34,7 +33,7 @@ public class Gondelbaan {
             aangepasteNaam.append(" ");
         }
 
-        return aangepasteNaam.toString().substring(0, naam.length());
+        return aangepasteNaam.toString();
     }
 
     public String getLand() {
@@ -76,7 +75,6 @@ public class Gondelbaan {
         } else{
             this.land="Onbekend";
         }
-
     }
 
     public void setLengte(double lengte) {
@@ -111,14 +109,14 @@ public class Gondelbaan {
     }
 
     public int getDuur(){
-        return ((int)(getLengte() * 1000)/(int)getSnelheid())/60;
+        return (int)(getLengte() * 1000/getSnelheid())/60;
     }
 
     public int getVervoersCapaciteit(){
-        return  (60*getAantalGondels()*getPassagiersPerGondel()) / getDuur();
+        return  (60*aantalGondels*passagiersPerGondel) / getDuur();
     }
 
     public String toString(){
-        return getNaam() + " [" + getHoogteVerschil() + "m]";
+        return naam + " [" + getHoogteVerschil() + "m]";
     }
 }

@@ -41,7 +41,9 @@ public class Leraar {
         System.out.printf("Leraar %s %s is aangesteld voor %d%%n", naam, voornaam, aanstellingspercentage);
         System.out.println("Volgende vakken behoren tot het takenpakket:");
         for (Vak vak: vakken){
-            System.out.printf("%-3s /t %s %-5d %n", vak.getCode(), vak.getNaam(), vak.getAantalStudiepunten());
+            if (vak != null){
+                System.out.printf("%-3s /t %s %-5d %n", vak.getCode(), vak.getNaam(), vak.getAantalStudiepunten());
+            }
         }
     }
 
@@ -49,7 +51,7 @@ public class Leraar {
         return vakken;
     }
 
-    public int getEersteVrijePlaats(){
+    private int getEersteVrijePlaats(){
         for (int i=0; i<vakken.length; i++){
             if (vakken[i] == null){
                 return i;

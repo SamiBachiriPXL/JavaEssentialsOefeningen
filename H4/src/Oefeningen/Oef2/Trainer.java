@@ -6,7 +6,7 @@ public class Trainer {
 
     public Trainer(String naam) {
         this.naam = naam;
-        this.pokedex = new Pokedex();
+        this.pokedex = new Pokedex(10);
     }
 
     public Pokedex getPokedex() {

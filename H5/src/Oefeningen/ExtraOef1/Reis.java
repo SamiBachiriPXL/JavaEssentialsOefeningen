@@ -20,7 +20,7 @@ public abstract class Reis {
     }
 
     public void setBestemming(String bestemming) {
-        if (Character.isDigit(bestemming.charAt(0))){
+        while (Character.isDigit(bestemming.charAt(0))){
             bestemming=bestemming.substring(1);
         }
         this.bestemming=bestemming;
@@ -31,6 +31,9 @@ public abstract class Reis {
     }
 
     public void setPrijs(double prijs) {
+        if (prijs<minimumPrijs){
+            prijs=minimumPrijs;
+        }
         this.prijs = prijs;
     }
 
