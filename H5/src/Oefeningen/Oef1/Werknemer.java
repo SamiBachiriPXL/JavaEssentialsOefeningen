@@ -8,10 +8,7 @@ public class Werknemer extends Persoon{
 
 
     public Werknemer(String naam, String voornaam) {
-        super(naam, voornaam);
-        this.functie="algemeen bediende";
-        this.salaris=1800;
-        aantal++;
+        this(naam, voornaam, "algemeen bediende", 1800);
     }
 
     public Werknemer(String naam, String voornaam, String functie, double salaris) {

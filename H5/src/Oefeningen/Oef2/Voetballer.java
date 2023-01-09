@@ -4,12 +4,10 @@ public final class Voetballer extends Sporter{
     private String club;
     private String opstelling;
 
-    String[] array = {"middenvelder", "aanvaller", "verdediger"};
+    private static final String[] ARRAY = {"middenvelder", "aanvaller", "verdediger"};
 
     public Voetballer(String naam, String voornaam) {
-        super(naam, voornaam, "voetbal");
-        club = "onbepaald";
-        opstelling = "onbepaald";
+        this(naam, voornaam, "onbepaald", "onbepaald");
     }
 
     public Voetballer(String naam, String voornaam, String club, String opstelling) {
@@ -19,7 +17,7 @@ public final class Voetballer extends Sporter{
     }
 
     public String getOpstelling() {
-        for (String woord: array){
+        for (String woord: ARRAY){
             if (woord.equals(opstelling))
                 return opstelling;
         }
@@ -40,7 +38,7 @@ public final class Voetballer extends Sporter{
     }
 
     public String[] getArray(){
-        return array;
+        return ARRAY;
     }
 
     @Override

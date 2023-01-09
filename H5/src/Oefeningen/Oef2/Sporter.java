@@ -7,14 +7,13 @@ public class Sporter extends Persoon{
     private static int aantal;
 
     public Sporter(String voornaam, String naam) {
-        super(voornaam, naam);
-        omschrijving="onbepaald";
-        aantal++;
+        this(voornaam, naam, "onbepaald");
     }
 
     public Sporter(String voornaam, String naam, String omschrijving) {
         super(voornaam, naam);
         this.omschrijving = omschrijving;
+        aantal++;
     }
 
     public static int getAantal() {

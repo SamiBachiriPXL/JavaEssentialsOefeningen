@@ -7,10 +7,6 @@ public class Pokedex {
         pokemon = new Pokemon[aantal];
     }
 
-    public Pokedex() {
-        this(10);
-    }
-
     public Pokemon[] getPokemon() {
         return pokemon;
     }

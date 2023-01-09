@@ -3,7 +3,7 @@ package Oefeningen.ExtraOef1;
 public class TreinReis extends Reis{
     private Boolean nationaal;
     private String specificatie;
-    private String[] ritten = {"IC", "IR", "L", "P"};
+    private static String[] ritten = {"IC", "IR", "L", "P"};
 
     public TreinReis(String bestemming) {
         super(bestemming);
@@ -17,19 +17,19 @@ public class TreinReis extends Reis{
         this.specificatie = specificatie;
     }
 
-    public String checkSpecificatie(){
+    private String checkSpecificatie(){
         if (nationaal){
             for (String rit: ritten){
-                if (!specificatie.equals(rit)){
-                    return specificatie="IC";
+                if (specificatie.equals(rit)){
+                    return specificatie;
                 }
             }
+            return "IC";
         }
         return specificatie;
     }
 
     public void setSpecificatie(String specificatie) {
-
         this.specificatie = checkSpecificatie();
     }
 
