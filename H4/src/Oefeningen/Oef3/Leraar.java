@@ -51,13 +51,13 @@ public class Leraar {
         return vakken;
     }
 
-    private int getEersteVrijePlaats(){
-        for (int i=0; i<vakken.length; i++){
-            if (vakken[i] == null){
-                return i;
-            }
-        }
-    }
+//    private int getEersteVrijePlaats(){
+//        for (int i=0; i<vakken.length; i++){
+//            if (vakken[i] == null){
+//                return i;
+//            }
+//        }
+//    }
 
     public void verwijderVak(String vakNaam){
 

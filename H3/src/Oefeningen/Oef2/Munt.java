@@ -10,7 +10,7 @@ public class Munt {
     }
 
     public Munt(String naam, double koers) {
-        this.naam = naam;
+        this.naam = "Euro";
         this.koers = koers;
     }
 
